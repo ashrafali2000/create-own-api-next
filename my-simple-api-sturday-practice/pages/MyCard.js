@@ -6,7 +6,6 @@ const { Meta } = Card;
 export default function MyCard({Ptitle,img}){
     return(
         <div>
-
     <Card
     style={{
       width: 300,
