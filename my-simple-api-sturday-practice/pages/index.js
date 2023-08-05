@@ -22,14 +22,12 @@ export default function Home(props) {
 }
 
 
-export async function getStaticeProps() {
+export async function getStaticProps() {
   const data =  getAll()
   console.log(data);
   return {
     props : {
-      title: "hello",
       products: data,
-
     }
   }
 }
