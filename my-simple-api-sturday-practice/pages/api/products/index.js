@@ -555,7 +555,10 @@ const products = [
 ]
 
 export default function handler(req, res) {
-  res.status(200).json(products)
+  if(req.method === "GET"){
+    res.status(200).json(products)
+  }
+  return res.status(404).send();
 }
 
 
