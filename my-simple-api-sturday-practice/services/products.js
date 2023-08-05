@@ -20,4 +20,5 @@ const filePath = path.join(process.cwd(), "data","products.json");
     id: data.length + 1,
     title, description, price,discountPercentage,rating,stock, brand, category,thumbnail,images
     })
+    fs.writeFileSync(filePath, JSON.stringify(data));
  }
