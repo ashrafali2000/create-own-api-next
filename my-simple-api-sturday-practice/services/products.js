@@ -13,3 +13,8 @@ const filePath = path.join(process.cwd(), "data","products.json");
     const data = getAll();
     return data.find(p => p.id === +id);
  }
+
+//  export function save(id) {
+//     const data = getAll();
+//     return data.find(p => p.id === +id);
+//  }
