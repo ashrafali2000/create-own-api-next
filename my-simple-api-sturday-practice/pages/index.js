@@ -1,4 +1,5 @@
 import { getAll } from "@/services/products"
+import AllProducts from "./allProducts";
 
 export default function Home(props) {
   const {title, products} = props;
@@ -8,9 +9,8 @@ export default function Home(props) {
     </div>
   }
   const productsList = products.map(product => {
-    return (<li key={product.id}>
-      <p>{product.title}</p>
-    </li>)
+    return (<AllProducts key={product.id} Ptitle = {product.title}  img = {product.images[0]}> 
+      </AllProducts>)
   })
   return (
     <>
