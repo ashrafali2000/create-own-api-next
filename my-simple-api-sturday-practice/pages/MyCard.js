@@ -3,7 +3,7 @@ import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/ico
 import { Avatar, Card } from 'antd';
 const { Meta } = Card;
 
-export default function AllProducts({Ptitle,img}){
+export default function MyCard({Ptitle,img}){
     <Card
     style={{
       width: 300,
