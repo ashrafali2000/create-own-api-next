@@ -3,13 +3,15 @@ import AllProducts from "./allProducts";
 
 export default function Home(props) {
   const {title, products} = props;
+  console.log(products)
   if(!products) {
     return <div>
       Loading....
     </div>
   }
-  const productsList = products.map(product => {<AllProducts key={product.id} Ptitle= {product.title}  img = {product.images[0]}> </AllProducts>
-  })
+  const productsList = products.map(p =><AllProducts key={p.id} Ptitle={p.title}  img = {p.images[0]}> </AllProducts>
+  )
+
   return (
     <>
    {productsList}
@@ -24,6 +26,7 @@ export async function getStaticProps() {
   return {
     props : {
       products: data,
-    }
+    }, 
+    // revelicate: 10
   }
 }
