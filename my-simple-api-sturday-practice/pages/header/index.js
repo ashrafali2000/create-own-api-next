@@ -1,5 +1,6 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { XMarkIcon } from '@heroicons/react/20/solid'
 import {
   ArrowPathIcon,
   Bars3Icon,
