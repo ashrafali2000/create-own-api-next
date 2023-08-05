@@ -2,20 +2,17 @@ import { getAll } from "@/services/products"
 import AllProducts from "./allProducts";
 
 export default function Home(props) {
-  const {title, products} = props;
+  const { products} = props;
   console.log(products)
   if(!products) {
     return <div>
       Loading....
     </div>
   }
-  const productsList = products.map(p =><AllProducts key={p.id} Ptitle={p.title}  img = {p.images[0]}> </AllProducts>
-  )
-
   return (
-    <>
-   {productsList}
-    </>
+    <div>
+{products.map(p =><AllProducts key={p.id} Ptitle={p.title}  img = {p.images[0]} />)}
+    </div>
   )
 }
 
