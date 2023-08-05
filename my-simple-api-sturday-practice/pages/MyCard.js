@@ -4,6 +4,9 @@ import { Avatar, Card } from 'antd';
 const { Meta } = Card;
 
 export default function MyCard({Ptitle,img}){
+    return(
+        <div>
+
     <Card
     style={{
       width: 300,
@@ -11,13 +14,16 @@ export default function MyCard({Ptitle,img}){
     cover={
       <img
         alt="example"
-        src={img}
+        src={`${img}`}
       />
     }
     >
       <p>{Ptitle}</p>
    
   </Card>
+        </div>
+
+    )
 
      
 }
