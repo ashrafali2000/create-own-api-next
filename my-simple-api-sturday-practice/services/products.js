@@ -14,7 +14,10 @@ const filePath = path.join(process.cwd(), "data","products.json");
     return data.find(p => p.id === +id);
  }
 
-//  export function save(id) {
-//     const data = getAll();
-//     return data.find(p => p.id === +id);
-//  }
+ export function save(title, description, price,discountPercentage,rating,stock, brand, category,thumbnail,images) {
+    const data = getAll();
+    data.push({
+    id: data.length + 1,
+    title, description, price,discountPercentage,rating,stock, brand, category,thumbnail,images
+    })
+ }

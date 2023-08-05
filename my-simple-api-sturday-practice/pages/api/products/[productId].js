@@ -6,10 +6,5 @@ export default function handler(req,res){
     const product = getById(productId);
     return res.status(200).json(product);
   }
-  else if(req.method === "POST") {
-    console.log(req.body);
-    return res.status(200).json({});
-
-  }
   return res.status(404).send();
 }
